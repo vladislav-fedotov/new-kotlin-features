@@ -1,14 +1,14 @@
-package example.validation.ex3
+package example._7_validation.ex3
 
 import arrow.core.raise.Raise
 import arrow.core.raise.ensureNotNull
 import arrow.core.raise.recover
-import example.validation.ex3.GeneralError.CompanyAlreadyExist
-import example.validation.ex3.GeneralError.EmptyCompanyName
-import example.validation.ex3.GeneralError.InvalidProgrammingLanguage
-import example.validation.ex3.ProgrammingLanguage.Companion.GO
-import example.validation.ex3.ProgrammingLanguage.Companion.JAVA
-import example.validation.ex3.ProgrammingLanguage.Companion.KOTLIN
+import example._7_validation.ex3.GeneralError.CompanyAlreadyExist
+import example._7_validation.ex3.GeneralError.EmptyCompanyName
+import example._7_validation.ex3.GeneralError.InvalidProgrammingLanguage
+import example._7_validation.ex3.ProgrammingLanguage.Companion.GO
+import example._7_validation.ex3.ProgrammingLanguage.Companion.JAVA
+import example._7_validation.ex3.ProgrammingLanguage.Companion.KOTLIN
 
 sealed class GeneralError {
     object EmptyCompanyName : GeneralError()

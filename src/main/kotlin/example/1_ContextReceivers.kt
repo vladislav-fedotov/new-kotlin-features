@@ -19,6 +19,8 @@ data class User(val id: Long, val name: String, val age: Int) {
     }
 
     context(Logger)
+//    context(logger: Logger) - possible syntax
+//    context(_: Logger) - possible syntax
     private fun logWithTime(message: String) =
         log("[${Clock.System.now()}] $message")
 
@@ -46,10 +48,11 @@ fun main() {
     }
 }
 
-
+// Context receivers
 class A
+// Extension function
 fun A.foo() = println("foo")
+// Wrapper function
 fun withA(block: A.() -> Unit) = block(A())
-
-context(A)
-fun bar() = foo()
+// Function with context receiver
+context(A) fun bar() = foo()
